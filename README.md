@@ -1,12 +1,13 @@
 # Bookstore
 
-In this project we use React and Redux to build the front-end of an application that helps organize and manage a bookstore.
+In this project, we use React and Redux to build the front-end of an application that helps organize and manage a bookstore.
 
-The project was splited into multiple milestones, and each milestone has functional and technical requirements that we needed to implement.
+The project was split into multiple milestones, and each milestone has functional and technical requirements that we needed to implement.
 
 ## ScreenShot
 
 ## Live Demo
+[Bookstore](https://somoye-tennyson.herokuapp.com)
 
 ## Built with
 - Node.js
