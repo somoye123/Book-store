@@ -4,8 +4,12 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook } from '../actions/index';
 
-const BooksList = ({ books }) => {
-  const booksList = books.map(book => <Book book={book} key={Math.random()} />);
+const BooksList = ({ books, removeBook }) => {
+  const handleRemoveBook = id => removeBook(id);
+
+  const booksList = books.map(book => (
+    <Book book={book} key={Math.random()} handleRemoveBook={handleRemoveBook} />
+  ));
   return (
     <table>
       <thead>
@@ -13,7 +17,6 @@ const BooksList = ({ books }) => {
           <th>Book ID</th>
           <th>Title</th>
           <th>Category</th>
-          <th>Remove </th>
         </tr>
       </thead>
       <tbody>
@@ -25,10 +28,15 @@ const BooksList = ({ books }) => {
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 const mapStateToProps = state => (
   {
     books: state.books,
   }
 );
-export default connect(mapStateToProps)(BooksList);
+const mapDispatchToProps = dispatch => ({
+  removeBook: id => dispatch(removeBook(id)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
