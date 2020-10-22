@@ -14,6 +14,9 @@ const Book = ({ book }) => {
       <td>
         {category}
       </td>
+      <td>
+        <button type="button">Remove</button>
+      </td>
     </tr>
   );
 };
