@@ -1,4 +1,6 @@
-const books = (state = [], action) => {
+import Constant from '../common/constantModule';
+
+const books = (state = Constant.defaultState, action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
       return [...state, { ...action.book }];
