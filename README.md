@@ -1,6 +1,4 @@
 # Bookstore
-Add a new table column to the BooksList component. It should render the “Remove Book” button next to each book.
-Implement the handleRemoveBook method which accepts a book as an argument and removes it from the Redux store. Don’t forget to pass that method down to the Book component as a prop.
 
 In this project, we use React and Redux to build the front-end of an application that helps organize and manage a bookstore.
 
