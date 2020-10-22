@@ -12,7 +12,7 @@ const BooksForm = ({ addBook }) => {
   });
 
   const handleChange = e => (
-    setState({ ...state, id: Math.floor(Math.random * 1000), [e.target.name]: e.target.value })
+    setState({ ...state, id: Math.floor(Math.random() * 1000), [e.target.name]: e.target.value })
   );
 
   const handleSubmit = e => {
