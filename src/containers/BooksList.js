@@ -24,18 +24,9 @@ const BooksList = ({
   return (
     <>
       <NavBar handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {bookList}
-        </tbody>
-      </table>
+      <div className="container">
+        {bookList}
+      </div>
     </>
   );
 };
