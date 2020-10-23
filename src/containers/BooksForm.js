@@ -26,14 +26,16 @@ const BooksForm = ({ addBook }) => {
   };
 
   return (
-    <form className="bookform-section" onSubmit={handleSubmit}>
-      <h4>ADD NEW BOOK</h4>
-      <input type="text" name="title" placeholder="Type a book title" value={state.title} onChange={handleChange} />
-      <select onChange={handleChange} name="category">
-        {Constants.categories.map(category => <option key={category}>{category}</option>)}
-      </select>
-      <button type="submit">Add a new book</button>
-    </form>
+    <div className="container border-top p-4 mt-4">
+      <h5 className="text-secondary font-weight-bold mb-3">ADD NEW BOOK</h5>
+      <form className="d-flex justify-content-between" onSubmit={handleSubmit}>
+        <input type="text" name="title" placeholder="Type a book title" value={state.title} onChange={handleChange} className="w-50" />
+        <select onChange={handleChange} name="category" className="w-25 mx-5">
+          {Constants.categories.map(category => <option key={category}>{category}</option>)}
+        </select>
+        <button type="submit" className="btn btn-primary w-25">Add a new book</button>
+      </form>
+    </div>
   );
 };
 
