@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { categoryFilter, removeBook } from '../actions/index';
-import CategoryFilter from '../components/CategoryFilter';
+import NavBar from '../components/NavBar';
 
 const BooksList = ({
   books, removeBook, categoryFilter, filter,
@@ -23,19 +23,10 @@ const BooksList = ({
 
   return (
     <>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {bookList}
-        </tbody>
-      </table>
+      <NavBar handleFilterChange={handleFilterChange} />
+      <div className="container">
+        {bookList}
+      </div>
     </>
   );
 };
