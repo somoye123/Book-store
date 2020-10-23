@@ -5,7 +5,7 @@ import Constant from '../common/constantModule';
 
 const Book = ({ book, handleRemoveBook }) => {
   const { id, title, category } = book;
-  return ( 
+  return (
     <article className="card mb-3 p-4">
       <div className="row no-gutters">
         <div className="col-md-6">
