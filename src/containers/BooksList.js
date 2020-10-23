@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { categoryFilter, removeBook } from '../actions/index';
-import CategoryFilter from '../components/CategoryFilter';
+import NavBar from '../components/NavBar';
 
 const BooksList = ({
   books, removeBook, categoryFilter, filter,
@@ -23,7 +23,7 @@ const BooksList = ({
 
   return (
     <>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
+      <NavBar handleFilterChange={handleFilterChange} />
       <table>
         <thead>
           <tr>
