@@ -14,7 +14,7 @@ const constant = () => {
         category: 'History',
       },
     ],
-    filter: 'All',
+    filter: 'ALL',
   };
   return {
     categories,
