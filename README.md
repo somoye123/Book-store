@@ -5,7 +5,7 @@ In this project, we use React and Redux to build the front-end of an application
 The project was split into multiple milestones, and each milestone has functional and technical requirements that we needed to implement.
 
 ## ScreenShot
-
+![Screenshot](./src/assets/screenshot.png)
 ## Live Demo
 [Bookstore](https://somoye-tennyson.herokuapp.com)
 
