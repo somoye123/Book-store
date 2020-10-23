@@ -10,4 +10,3 @@ export default (state = Constant.defaultState.filter, action) => {
       return state;
   }
 };
-
