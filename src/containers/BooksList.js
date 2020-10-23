@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -12,15 +13,13 @@ const BooksList = ({
   const handleFilterChange = e => categoryFilter(e.target.value);
   let bookList;
 
-  if (filter === 'ALL') {
-    bookList = books.map(book => (
+  (filter === 'ALL') ? (bookList = books.map(book => (
+    <Book book={book} key={Math.random()} handleRemoveBook={handleRemoveBook} />
+  ))) : (bookList = books
+    .filter(book => book.category === filter)
+    .map(book => (
       <Book book={book} key={Math.random()} handleRemoveBook={handleRemoveBook} />
-    ));
-  } else {
-    bookList = books.filter(book => book.category === filter).map(book => (
-      <Book book={book} key={Math.random()} handleRemoveBook={handleRemoveBook} />
-    ));
-  }
+    )));
 
   return (
     <>
