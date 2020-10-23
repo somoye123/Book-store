@@ -1,5 +1,7 @@
 const constant = () => {
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  const authors = ['Somoye Ayotunde', 'William Shakespeare', 'Tzvaita Tennyson', 'John Grisham', 'Stephen King', 'James Patterson', 'Dan Brown', 'Charles Dickens', 'Anne Rice', 'Jessica Brody'];
+
   const generateRandomId = () => Math.floor(Math.random() * 1000);
   const defaultState = {
     books: [
@@ -19,6 +21,7 @@ const constant = () => {
   return {
     categories,
     defaultState,
+    authors,
   };
 };
 
